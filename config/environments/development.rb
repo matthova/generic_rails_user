@@ -53,5 +53,5 @@ Rails.application.configure do
     :password => ENV['MAILGUN_PASSWORD']
   }
 
-  config.action_mailer.default_url_options = { :host => "localhost:5000" }
+  config.action_mailer.default_url_options = { :host => ENV['MAILGUN_HOST'] }
 end
