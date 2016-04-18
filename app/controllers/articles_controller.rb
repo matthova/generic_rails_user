@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
+    serializer = Itsdangerousr::TimestampSigner.new('secret-key')
+    payload = 'foo'
+    result = serializer.dumps(serialzer, payload)
+    puts result
     @articles = Article.all
   end
 
